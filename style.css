@@ -46,6 +46,28 @@ ul {
 .btn:hover {
     background-color: #004999;
 }
+.btn-theme {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+/* Clases que se activaran mediante javascript para cambiar el tema */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+/*Agregando media query para mejorar la visualización en dispositivos móviles */
+
 @media (max-width: 600px) {
     .card {
         padding: 1rem;

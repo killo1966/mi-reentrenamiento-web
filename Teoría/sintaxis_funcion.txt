@@ -1,0 +1,24 @@
+JavaScript
+// Seleccionamos el botón por su clase
+const boton = document.querySelector('.btn');
+
+// Añadimos un escuchador de eventos para el clic
+boton.addEventListener('click', (evento) => {
+ evento.preventDefault(); // Evitamos que abra el enlace por un momento
+ alert('¡Has hecho clic en el botón interactivo con JavaScript!');
+});
+--------------------------------------------------------------------------------------------
+const boton = document.querySelector('.btn');
+
+boton.addEventListener('click', () => {
+    // La alerta se muestra y frena la ejecución hasta que pulses "Aceptar"
+    alert('¡Te vas directo al GitHub de Killo1966!');
+    // Al no haber preventDefault, al cerrar la alerta el navegador abrirá el enlace
+});
+Desglose de la sintaxis
+    • boton: Es la variable donde guardaste el elemento HTML que seleccionaste previamente.
+    • .addEventListener(): Es un método incorporado en JavaScript que sirve para "escuchar" acciones o eventos que ocurren sobre ese elemento.
+    • 'click': Es el primer argumento que le pasas al método. Indica qué tipo de evento quieres detectar (un clic, pasar el ratón por encima, pulsar una tecla, etc.).
+    • () => {}: Es el segundo argumento, concretamente una función anónima de tipo flecha (arrow function). Todo lo que escribas dentro de esas llaves {} es el código que se ejecutará como respuesta al evento.
+Si en lugar de (evento) escribes simplemente (e) o (), funcionará exactamente igual. La única diferencia es que si pones un nombre (como evento o e), puedes usarlo dentro de la función para consultar propiedades, como por ejemplo evento.target para saber exactamente qué elemento fue el que recibió el clic.
+
