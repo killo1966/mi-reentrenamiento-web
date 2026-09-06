@@ -1,0 +1,7 @@
+Cada vez que hagas cambios en tu código, solo tendrás que usar los tres comandos de siempre para guardarlos y subirlos:
+
+    git add . (para añadir los cambios)
+
+    git commit -m "Mensaje descriptivo" (para empaquetarlos)
+
+    git push (para subirlos a GitHub)
