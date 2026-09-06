@@ -46,3 +46,12 @@ ul {
 .btn:hover {
     background-color: #004999;
 }
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 1.25rem;
+    }
+}
