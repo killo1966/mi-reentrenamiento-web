@@ -22,3 +22,46 @@ Desglose de la sintaxis
     • () => {}: Es el segundo argumento, concretamente una función anónima de tipo flecha (arrow function). Todo lo que escribas dentro de esas llaves {} es el código que se ejecutará como respuesta al evento.
 Si en lugar de (evento) escribes simplemente (e) o (), funcionará exactamente igual. La única diferencia es que si pones un nombre (como evento o e), puedes usarlo dentro de la función para consultar propiedades, como por ejemplo evento.target para saber exactamente qué elemento fue el que recibió el clic.
 
+
+
+
+
+
+
+
+
+
+
+
+
+Me explicas la sintaxis de esto: 
+
+// Seleccionamos el nuevo botón de tema y el body
+const themeBtn = document.querySelector('#theme-btn');
+const body = document.body;
+
+// Escuchamos el clic
+themeBtn.addEventListener('click', () => {
+ // classList.toggle añade la clase si no está, y la quita si ya está
+ body.classList.toggle('dark-mode');
+});
+
+
+Cada línea de este fragmento cumple una función específica para conectar HTML, CSS y JavaScript mediante el DOM (Document Object Model).
+Selección de elementos
+    • const themeBtn = document.querySelector('#theme-btn');: Declara una constante llamada themeBtn. El método document.querySelector() busca en todo el documento HTML el primer elemento que coincida con el selector CSS que le pases (en este caso, #theme-btn busca el elemento que tenga ese ID exacto).
+    • const body = document.body;: Es una forma directa y abreviada que tiene JavaScript para acceder a la etiqueta <body> de tu HTML sin necesidad de usar un selector de búsqueda tradicional.
+Escucha de eventos
+    • themeBtn.addEventListener('click', ...): Configura un "vigilante" sobre el botón. El primer parámetro ('click') define qué acción exacta del usuario debe esperar, y el segundo parámetro es la función que se ejecutará en cuanto el usuario haga clic.
+Manipulación de clases y alternancia
+    • body.classList: Accede a la lista de clases CSS que tiene actualmente aplicadas el elemento body en ese instante.
+    • .toggle('dark-mode'): Es un método inteligente que simplifica el código. Comprueba automáticamente si la clase dark-mode ya está presente en el elemento. Si no está, la añade; si ya está puesta, la elimina. Esto evita tener que programar un condicional manual (if/else) para comprobar si el modo oscuro estaba activo o no
+---------------------------------------------------------------------------------------------------------------------
+
+Descriptción del uso de: cursor: pointer (CSS)
+
+cursor: pointer cambia la forma visual del cursor del ratón cuando el usuario pasa por encima de un elemento.
+En lugar de mostrarse como la flecha estándar, adopta la forma de una mano con el dedo índice extendido (el icono clásico que aparece al situarte sobre un enlace de internet).
+    • Propósito principal: Ofrecer una pista visual intuitiva para que el usuario sepa de inmediato que el elemento (como tu botón de tema) es interactivo y se puede pulsar.
+Sin esta propiedad, el cursor se mantendría como una flecha normal o una barra de selección de texto, lo que puede desconcertar al usuario haciéndole dudar si el elemento es un botón real o solo un texto decorativo.
+
