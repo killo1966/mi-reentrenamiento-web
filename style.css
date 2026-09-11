@@ -1,3 +1,6 @@
+/* ==========================================
+   1. ESTILOS GLOBALES Y BASE
+   ========================================== */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -9,6 +12,9 @@ body {
     margin: 0;
 }
 
+/* ==========================================
+   2. COMPONENTES (Estructuras y Tarjetas)
+   ========================================== */
 .card {
     background: white;
     padding: 2rem;
@@ -27,6 +33,7 @@ h1 {
 ul {
     padding-left: 20px;
 }
+
 .card-actions {
     margin-top: 1.5rem;
     display: flex;
@@ -46,6 +53,7 @@ ul {
 .btn:hover {
     background-color: #004999;
 }
+
 .btn-theme {
     background-color: #333;
     color: white;
@@ -55,19 +63,49 @@ ul {
     cursor: pointer;
     margin-top: 1rem;
 }
-/* Clases que se activaran mediante javascript para cambiar el tema */
+
+.card-stats {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-like {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-like:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#like-count {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   3. ESTADOS Y MODIFICADORES (Modo Oscuro)
+   ========================================== */
 body.dark-mode {
     background-color: #121212;
     color: #f4f4f9;
 }
+
 body.dark-mode .card {
     background-color: #1e1e1e;
     color: #f4f4f9;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 }
 
-/*Agregando media query para mejorar la visualización en dispositivos móviles */
-
+/* ==========================================
+   4. DISEÑO ADAPTATIVO (Media Queries)
+   ========================================== */
 @media (max-width: 600px) {
     .card {
         padding: 1rem;
