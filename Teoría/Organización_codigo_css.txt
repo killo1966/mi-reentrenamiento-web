@@ -1,0 +1,75 @@
+Organización del archivo style.css
+En CSS, el orden de las reglas importa debido a la cascada (las reglas escritas más abajo sobrescriben a las de arriba si tienen la misma especificidad). Por regla general, las consultas de medios (@media) deben ir siempre al final del todo para garantizar que adaptan correctamente cualquier componente definido previamente.
+Tu archivo style.css debería estructurarse en bloques temáticos ordenados de esta forma:
+/* ==========================================
+   1. ESTILOS GLOBALES Y BASE
+   ========================================== */
+body {
+    /* Estilos del body, fuentes, colores base */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================
+   2. COMPONENTES (Estructuras y Tarjetas)
+   ========================================== */
+.card {
+    /* Estilos generales de tu tarjeta */
+}
+
+.card-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Nuevos estilos para los contadores y botones de 'Me gusta' */
+.card-stats {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-like {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-like:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn, .btn-theme {
+    /* Estilos de tus botones principales y de tema */
+}
+
+/* ==========================================
+   3. ESTADOS Y MODIFICADORES (Modo Oscuro)
+   ========================================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+}
+
+/* ==========================================
+   4. DISEÑO ADAPTATIVO (Media Queries)
+   ========================================== */
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+}
